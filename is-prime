@@ -1,0 +1,26 @@
+function isPrime(num) {
+  
+ if (num <= 1) {
+    return false; // Numbers less than or equal to 1 are not prime
+  }
+
+  if (num <= 3) {
+    return true; // 2 and 3 are prime numbers
+  }
+
+  if (num % 2 === 0 || num % 3 === 0) {
+    return false; // Numbers divisible by 2 or 3 are not prime   
+
+  }
+  
+  let i = 5;
+  while (i * i <= num) {
+    if (num % i === 0 || num % (i + 2) === 0) {
+      return false;
+    }
+    i += 6;
+  }
+
+  return true;
+
+}
