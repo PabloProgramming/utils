@@ -1,0 +1,8 @@
+function circleArea(circle){
+  const radius = circle.radius;
+  
+  const area = Math.PI * (radius * radius);
+  
+  return area;
+  
+}
