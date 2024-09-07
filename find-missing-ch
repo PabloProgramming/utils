@@ -1,0 +1,11 @@
+function findMissingLetter(array){
+for (let i = 0; i < array.length - 1; i++) {
+        // Check if the current letter plus one in the alphabet is not equal to the next letter
+        if (array[i].charCodeAt(0) + 1 !== array[i + 1].charCodeAt(0)) {
+            // If it's not, return the missing letter by adding one to the current letter
+            return String.fromCharCode(array[i].charCodeAt(0) + 1);
+        }
+    }
+    // If no letter is missing (but according to the problem, there should be one missing)
+    return '';
+}
