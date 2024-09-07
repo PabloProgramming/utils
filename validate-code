@@ -1,0 +1,9 @@
+function validateCode (code) {
+  const regex = code.toString();
+
+if (regex[0] === "1" || regex[0] === "2" || regex[0] === "3"){
+  return true;
+} else {
+  return false;
+}
+}
