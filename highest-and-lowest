@@ -1,0 +1,24 @@
+function highAndLow(numbers){
+ // Split the input string into an array of number strings
+  const numArray = numbers.split(' ');
+
+  // Initialize smallest and biggest with the first number string
+  let smallest = numArray[0];
+  let biggest = numArray[0];
+  let n;
+
+  // Iterate through the number strings to find the smallest and biggest
+  for (const num of numArray) {
+    n = Number(num);
+    // Compare string values directly
+    if (n < smallest) {
+      smallest = num;
+    }
+    if (n > biggest) {
+      biggest = num;
+    }
+  }
+
+  // Return the result with the highest number first and the smallest number second
+  return `${biggest} ${smallest}`;
+} 
