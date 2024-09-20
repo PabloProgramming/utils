@@ -1,0 +1,24 @@
+import java.util.Arrays;
+
+public class DescendingOrder {
+  public static int sortDesc(final int num) {
+    // Step 1: Convert the number to a String
+    String numStr = Integer.toString(num);
+
+    // Step 2: Convert the string to an array of characters
+    char[] numArr = numStr.toCharArray();
+
+    // Step 3: Sort the array in ascending order
+    Arrays.sort(numArr);
+
+    // Step 4: Use a StringBuilder to build the result in reverse order
+    StringBuilder sortedStr = new StringBuilder();
+    for (int i = numArr.length - 1; i >= 0; i--) {
+      // Append each digit in reverse order
+      sortedStr.append(numArr[i]);
+    }
+
+    // Step 5: Convert the result back to an integer
+    return Integer.parseInt(sortedStr.toString());
+  }
+}  
